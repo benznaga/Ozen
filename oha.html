@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OHA Learning</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    .btn {
+      display: block;
+      margin: 15px auto;
+      padding: 15px;
+      width: 200px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .student { background: blue; }
+    .teacher { background: green; }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .hidden { display: none; }
+  </style>
+</head>
+
+<body>
+
+<h1>OHA Learning</h1>
+
+<!-- LANDING -->
+<div id="home">
+  <button class="btn student" onclick="showStudent()">I am a Student</button>
+  <button class="btn teacher" onclick="showTeacher()">I am a Teacher</button>
+</div>
+
+<!-- STUDENT PAGE -->
+<div id="student" class="hidden">
+  <h2>Select Class</h2>
+  <button class="btn student" onclick="selectClass(10)">Class 10</button>
+  <button class="btn student" onclick="selectClass(11)">Class 11</button>
+</div>
+
+<!-- STREAM PAGE -->
+<div id="stream" class="hidden">
+  <h2>Select Stream</h2>
+  <button class="btn student" onclick="showSubjects('science')">Science</button>
+  <button class="btn student" onclick="showSubjects('arts')">Arts</button>
+</div>
+
+<!-- SUBJECT PAGE -->
+<div id="subjects" class="hidden">
+  <h2>Select Subject</h2>
+  <button class="btn student" onclick="showTopic()">Science</button>
+</div>
+
+<!-- TOPIC PAGE -->
+<div id="topic" class="hidden">
+  <div class="card">
+    <h3>Covalent Bond</h3>
+
+    <p><b>Comic:</b><br>
+    Student forgot book → teacher said share → both study</p>
+
+    <p><b>Think:</b> Why do carbon atoms share electrons?</p>
+
+    <p><b>Concept:</b><br>
+    Atoms want stability<br>
+    Cannot gain/lose easily<br>
+    So they share electrons</p>
+
+    <button class="btn student" onclick="alert('Correct! You earned XP 🎉')">
+      Take Quiz
+    </button>
+  </div>
+</div>
+
+<!-- TEACHER PAGE -->
+<div id="teacher" class="hidden">
+  <h2>Teacher Dashboard</h2>
+  <p>Create lesson plans and track syllabus</p>
+</div>
+
+<script>
+function hideAll() {
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("student").classList.add("hidden");
+  document.getElementById("stream").classList.add("hidden");
+  document.getElementById("subjects").classList.add("hidden");
+  document.getElementById("topic").classList.add("hidden");
+  document.getElementById("teacher").classList.add("hidden");
+}
+
+function showStudent() {
+  hideAll();
+  document.getElementById("student").classList.remove("hidden");
+}
+
+function showTeacher() {
+  hideAll();
+  document.getElementById("teacher").classList.remove("hidden");
+}
+
+function selectClass(cls) {
+  hideAll();
+  if (cls == 11) {
+    document.getElementById("stream").classList.remove("hidden");
+  } else {
+    document.getElementById("subjects").classList.remove("hidden");
+  }
+}
+
+function showSubjects() {
+  hideAll();
+  document.getElementById("subjects").classList.remove("hidden");
+}
+
+function showTopic() {
+  hideAll();
+  document.getElementById("topic").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
