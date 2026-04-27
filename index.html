@@ -285,8 +285,8 @@
 
 </div>
 
-  <div id="dashboard"></div>
-
+<div id="dashboard" style="display:none;">
+  
 <h3 style="margin-top:20px; margin-bottom:10px;">
   Choose Your Class
 </h3>
@@ -321,6 +321,16 @@ function toggleMenu() {
 }
 
     function goToDashboard() {
+
+
+document.querySelector('.hero').style.display = "none";
+  document.querySelector('.features-grid').style.display = "none";
+
+  // Show dashboard
+  document.getElementById("dashboard").style.display = "block";
+
+
+      
   const el = document.getElementById("dashboard");
   if (el) {
     el.scrollIntoView({ behavior: "smooth" });
