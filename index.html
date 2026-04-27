@@ -317,19 +317,25 @@
 
 </div>
   
-  <script>
-    
+<script>
 function toggleMenu() {
-  document.getElementById("menu").classList.toggle("show");
+  const menu = document.getElementById("menu");
+  if (menu) {
+    menu.classList.toggle("show");
+  }
 }
 
-<script>
 function goToDashboard() {
-  document.querySelector('.hero').style.display = "none";
-  document.querySelector('.features-grid').style.display = "none";
-  document.querySelector('.stats').style.display = "none";
+  console.log("clicked"); // debug
 
+  const hero = document.querySelector('.hero');
+  const features = document.querySelector('.features-grid');
+  const stats = document.querySelector('.stats');
   const dashboard = document.getElementById("dashboard");
+
+  if (hero) hero.style.display = "none";
+  if (features) features.style.display = "none";
+  if (stats) stats.style.display = "none";
 
   if (dashboard) {
     dashboard.style.display = "block";
@@ -338,7 +344,6 @@ function goToDashboard() {
     alert("Dashboard not found");
   }
 }
-    
 </script>
 
 </body>
