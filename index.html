@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OHA Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    }
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #222;
+    }
+
+    .highlight {
+      color: #2ecc71;
+    }
+
+    .hero {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 15px;
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
+    }
+
+    .green { background: linear-gradient(45deg, #2ecc71, #27ae60); }
+    .blue { background: linear-gradient(45deg, #3498db, #2980b9); }
+    .purple { background: linear-gradient(45deg, #6c5ce7, #4834d4); }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .feature {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      margin-top: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      font-weight: 500;
+    }
+
+    .levels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .level {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .level:hover {
+      transform: translateY(-5px);
+      background: #2ecc71;
+      color: white;
+    }
+
+    .hidden { display: none; }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HOME -->
+<div id="home">
+  <div class="hero">
+    <h1>Learn Better.<br><span class="highlight">Achieve Greater.</span></h1>
+    <p>Your smart learning app for Classes 8–12</p>
+
+    <button class="btn green" onclick="show('student')">🎓 I am a Student</button>
+    <button class="btn blue" onclick="show('teacher')">👨‍🏫 I am a Teacher</button>
+  </div>
+
+  <div class="section">
+    <div class="feature">📘 Concept First Learning</div>
+    <div class="feature">🧠 Think Deep</div>
+    <div class="feature">🎯 Practice & Quizzes</div>
+    <div class="feature">🏆 Earn XP & Progress</div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden">
+
+  <h2>Welcome Student 👋</h2>
+
+  <div class="hero">
+    <h1>Learn Better.<br><span class="highlight">Achieve Greater.</span></h1>
+    <p>Start your journey 🚀</p>
+  </div>
+
+  <div class="card">
+    <button class="btn green" onclick="show('student')">
+      📚 Choose Your Class
+    </button>
+  </div>
+
+  <div class="card">
+    <p>🔥 Your Progress: 0%</p>
+  </div>
+
+</div> <!-- ✅ CLOSE DASHBOARD HERE -->
+
+
+<!-- STUDENT -->
+<div id="student" class="hidden">
+  <h2>Select Your Class</h2>
+
+  <div class="levels">
+    <div class="level" onclick="selectClass(8)">8</div>
+    <div class="level" onclick="selectClass(9)">9</div>
+    <div class="level" onclick="selectClass(10)">10</div>
+    <div class="level" onclick="selectClass(11)">11</div>
+    <div class="level" onclick="selectClass(12)">12</div>
+  </div>
+</div>
+
+<!-- STREAM -->
+<div id="stream" class="hidden">
+  <h2>Select Stream</h2>
+
+  <button class="btn purple" onclick="showScience()">Science 🔬</button>
+  <button class="btn purple" onclick="showArts()">Arts 📚</button>
+</div>
+
+<!-- SUBJECT -->
+<div id="subjects" class="hidden">
+  <h2>Select Subject</h2>
+<div id="subjectList" style="margin-top:15px;"></div>o
+</div>
+
+<!-- TEACHER -->
+<div id="teacher" class="hidden">
+  <h2>Lesson Planner</h2>
+
+  <div class="hero">
+    <input type="number" id="topics" placeholder="Total Topics"><br><br>
+    <input type="date" id="examDate"><br><br>
+
+    <button class="btn blue" onclick="calculatePlan()">Generate Plan</button>
+
+    <p id="result"></p>
+  </div>
+</div>
+
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll("div[id]").forEach(el => el.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function selectClass(cls){
+  if(cls == 11 || cls == 12){
+    show('stream');
+  } else {
+    loadSubjects(["Maths","Science","Social Science","English","Alt English","FIT"]);
+  }
+}
+
+function showScience(){
+  loadSubjects(["Maths","Physics","Chemistry","Biology"]);
+}
+
+function showArts(){
+  loadSubjects(["History","Political Science","Economics","Sociology"]);
+}
+
+function loadSubjects(subjects){
+  let list = document.getElementById("subjectList");
+
+  list.innerHTML = "";
+
+  show('subjects');
+
+  subjects.forEach(sub => {
+    let btn = document.createElement("button");
+
+    btn.className = "btn purple";
+    btn.innerText = sub;
+
+    btn.onclick = () => {
+      alert("Next: Chapters + Topics for " + sub);
+    };
+
+    list.appendChild(btn);
+  });
+}
+
+function calculatePlan(){
+  let topics = document.getElementById("topics").value;
+  let examDate = new Date(document.getElementById("examDate").value);
+  let today = new Date();
+
+  let daysLeft = Math.ceil((examDate - today) / (1000*60*60*24));
+
+  let perDay = (topics / daysLeft).toFixed(2);
+
+  document.getElementById("result").innerText =
+    "📅 Days Left: " + daysLeft +
+    " | 📘 Topics/day: " + perDay;
+}
+</script>
+
+</body>
+</html>
