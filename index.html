@@ -34,7 +34,14 @@
   display: flex;
   gap: 12px;
   white-space: nowrap;
-  overflow-x: auto;
+    .nav-links {
+  display: flex;
+  gap: 12px;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #666;
+    }
   font-size: 14px;
   color: #666;
 }
@@ -172,6 +179,12 @@
     display: flex;
   }
 }
+
+    @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+    }
     
   </style>
 </head>
