@@ -137,6 +137,41 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   font-weight: 500;
 }
+
+    /* MENU BUTTON */
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .nav-links span {
+    margin: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
     
   </style>
 </head>
@@ -150,6 +185,10 @@
   <div class="logo">
    <img src="logo.png" style="height:70px; object-fit:contain;">
   </div>
+
+  
+  <!-- ✅ Menu Button -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
     <div class="nav-links">
       <span class="active">Home</span>
@@ -230,6 +269,12 @@
 <div class="stat-card">🏆 <b>Top Rankers</b></div>
 
 </div>
+  
+  <script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+  </script>
 
 </body>
 </html>
