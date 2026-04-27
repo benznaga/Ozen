@@ -314,16 +314,16 @@
   </div>
 
 </div>
+
+</div>
   
   <script>
+fu<script>
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
 }
 
-    
-
-    function goToDashboard() {
-
+function goToDashboard() {
   const hero = document.querySelector('.hero');
   const features = document.querySelector('.features-grid');
   const stats = document.querySelector('.stats');
@@ -335,23 +335,12 @@ function toggleMenu() {
 
   if (dashboard) {
     dashboard.style.display = "block";
+    dashboard.scrollIntoView({ behavior: "smooth" });
   } else {
     alert("Dashboard not found");
   }
 }
-
-const el = document.getElementById("dashboard");
-el.scrollIntoView({ behavior: "smooth" });
-      
-  const el = document.getElementById("dashboard");
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-  } else {
-    alert("Dashboard section not found");
-  }
-    }
-    
-  </script>
+</script>
 
 </body>
 </html>
