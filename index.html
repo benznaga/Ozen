@@ -318,20 +318,18 @@
 </div>
   
   <script>
-fu<script>
+    
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
 }
 
+<script>
 function goToDashboard() {
-  const hero = document.querySelector('.hero');
-  const features = document.querySelector('.features-grid');
-  const stats = document.querySelector('.stats');
-  const dashboard = document.getElementById("dashboard");
+  document.querySelector('.hero').style.display = "none";
+  document.querySelector('.features-grid').style.display = "none";
+  document.querySelector('.stats').style.display = "none";
 
-  if (hero) hero.style.display = "none";
-  if (features) features.style.display = "none";
-  if (stats) stats.style.display = "none";
+  const dashboard = document.getElementById("dashboard");
 
   if (dashboard) {
     dashboard.style.display = "block";
@@ -340,6 +338,7 @@ function goToDashboard() {
     alert("Dashboard not found");
   }
 }
+    
 </script>
 
 </body>
