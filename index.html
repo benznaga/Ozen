@@ -319,6 +319,16 @@
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
 }
+
+    function goToDashboard() {
+  const el = document.getElementById("dashboard");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  } else {
+    alert("Dashboard section not found");
+  }
+    }
+    
   </script>
 
 </body>
