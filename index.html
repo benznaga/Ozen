@@ -320,16 +320,22 @@ function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
 }
 
+    
+
     function goToDashboard() {
 
-
-document.querySelector('.hero').style.display = "none";
+  // Hide all home sections
+  document.querySelector('.hero').style.display = "none";
   document.querySelector('.features-grid').style.display = "none";
+  document.querySelector('.stats').style.display = "none";   // ⭐ THIS WAS MISSING
 
   // Show dashboard
   document.getElementById("dashboard").style.display = "block";
 
+}
 
+const el = document.getElementById("dashboard");
+el.scrollIntoView({ behavior: "smooth" });
       
   const el = document.getElementById("dashboard");
   if (el) {
