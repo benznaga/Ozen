@@ -324,14 +324,20 @@ function toggleMenu() {
 
     function goToDashboard() {
 
-  // Hide all home sections
-  document.querySelector('.hero').style.display = "none";
-  document.querySelector('.features-grid').style.display = "none";
-  document.querySelector('.stats').style.display = "none";   // ⭐ THIS WAS MISSING
+  const hero = document.querySelector('.hero');
+  const features = document.querySelector('.features-grid');
+  const stats = document.querySelector('.stats');
+  const dashboard = document.getElementById("dashboard");
 
-  // Show dashboard
-  document.getElementById("dashboard").style.display = "block";
+  if (hero) hero.style.display = "none";
+  if (features) features.style.display = "none";
+  if (stats) stats.style.display = "none";
 
+  if (dashboard) {
+    dashboard.style.display = "block";
+  } else {
+    alert("Dashboard not found");
+  }
 }
 
 const el = document.getElementById("dashboard");
