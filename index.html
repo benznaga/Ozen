@@ -44,6 +44,16 @@ button:last-of-type {
   background: #3498db;
   color: white;
 }
+    button {
+  display: block;
+  width: 80%;
+  margin: 12px auto;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
   </style>
 </head>
 
@@ -53,9 +63,14 @@ button:last-of-type {
 
   <!-- HOME -->
   <div id="home">
-    <img src="logo.png" style="height:50px;">
-    <p>Learn Better. Achieve Greater.</p>
-
+    <img src="logo.png" style="width:120px; margin-bottom:20px;">
+    <h1 style="font-size:22px; font-weight:500; color:#333;">
+  Learn Better.<br>Achieve Greater.
+</h1>
+    
+<p style="color:#777; font-size:14px;">
+  Smart Micro-learning for Classes 8–12
+</p>
     <button onclick="show('dashboard')">
       I am a Student
     </button>
