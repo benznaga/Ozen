@@ -195,11 +195,11 @@
   padding: 20px;
   border-radius: 20px;
   margin-top: 20px;
-  gap: 15px;
+  gap: 20px;
 }
     
-.dash-left {
-  flex: 1;
+.dash-left p {
+  margin: 10px 0;
 }
 
 .dash-right {
@@ -210,7 +210,7 @@
 
 .student-img {
   width: 100%;
-  max-width: 180px;   /* 🔥 smaller for mobile */
+  max-width: 220px;
   border-radius: 15px;
 }
 
@@ -231,6 +231,20 @@
   font-weight: 500;
 }
 
+    @media (max-width: 768px) {
+  .dash-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dash-right {
+    order: 2;
+  }
+
+  .dash-left {
+    order: 1;
+  }
+    }
     
   </style>
   
