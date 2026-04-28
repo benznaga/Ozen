@@ -132,22 +132,35 @@
 }
 
 .stats {
+  margin-top: 25px;
   display: flex;
-  justify-content: center;   /* center horizontally */
+  justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;   /* allows wrapping on small screens */
 }
 
 .stat-card {
   background: white;
-  padding: 15px 20px;
+  padding: 12px 18px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   font-weight: 500;
-  min-width: 120px;
   text-align: center;
+
+  width: auto;        /* important */
+  min-width: 110px;   /* keeps size consistent */
 }
 
+    @media (max-width: 768px) {
+  .stats {
+    justify-content: center;
+  }
+
+  .stat-card {
+    width: 80%;   /* makes them look clean on mobile */
+  }
+}
+    
     /* MENU BUTTON */
 .menu-btn {
   display: none;
