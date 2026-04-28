@@ -131,13 +131,21 @@
   margin-top: 25px;   /* ✅ creates proper gap */
 }
 
+.stats {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .stat-card {
   background: white;
-  padding: 15px;
+  padding: 15px 20px;
   border-radius: 20px;
-  margin-bottom: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   font-weight: 500;
+  min-width: 120px;
+  text-align: center;
 }
 
     /* MENU BUTTON */
