@@ -189,13 +189,13 @@
 /* DASHBOARD HERO */
 .dash-hero {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 20px;
   margin-top: 20px;
+  gap: 20px;
 }
 
 .dash-left {
@@ -204,7 +204,12 @@
 
 .dash-right {
   flex: 1;
-  text-align: center;
+  text-align: right;
+}
+
+.student-img {
+  width: 100%;
+  max-width: 280px;
 }
 
 .start-btn {
@@ -212,23 +217,28 @@
   padding: 12px 20px;
   border: none;
   border-radius: 25px;
-  background: #2ecc71;
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
   color: white;
   font-weight: bold;
 }
 
 .dash-stats {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin-top: 20px;
+  font-weight: 500;
 }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
   .dash-hero {
     flex-direction: column;
     text-align: center;
   }
-    }
+
+  .dash-right {
+    text-align: center;
+  }
+}
     
   </style>
   
@@ -353,10 +363,9 @@
   </div>
 
   <div class="dash-right">
-    <img src="student.png" style="width:100%; max-width:300px;">
+    <img src="student.png" class="student-img">
   </div>
 
-</div>
 
 <div style="display:flex; gap:10px; overflow-x:auto; margin-top:10px;">
 
