@@ -11,10 +11,9 @@
       background: #f3f6f9;
     }
 
-    .container {
-  padding: 20px;
-  max-width: 1000px;   /* center layout width */
-  margin: auto;        /* 🔥 THIS centers everything */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;   /* ⭐ centers whole layout */
 }
 
     /* NAVBAR */
@@ -133,7 +132,7 @@
   margin-top: 25px;   /* ✅ creates proper gap */
 }
 
-..stats {
+.stats {
   margin-top: 25px;
 
   display: flex !important;
@@ -144,7 +143,7 @@
   flex-wrap: wrap;
 }
 
-      .stat-card {
+.stat-card {
   background: white;
   padding: 12px 18px;
   border-radius: 20px;
@@ -152,12 +151,11 @@
   font-weight: 500;
   text-align: center;
 
-  display: inline-flex;     /* ✅ correct */
-  align-items: center;      /* ✅ center vertically */
-  justify-content: center;  /* ✅ center content */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  width: auto;
-  min-width: 120px;
+  width: fit-content !important;   /* ⭐ force shrink */
 }
 
      @media (max-width: 768px) {
