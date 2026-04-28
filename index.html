@@ -12,8 +12,10 @@
     }
 
     .container {
-      padding: 20px;
-    }
+  padding: 20px;
+  max-width: 1000px;   /* center layout width */
+  margin: auto;        /* 🔥 THIS centers everything */
+}
 
     /* NAVBAR */
     .navbar {
@@ -134,9 +136,12 @@
 .stats {
   margin-top: 25px;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* center items */
+  align-items: center;
   gap: 15px;
-  flex-wrap: wrap;   /* allows wrapping on small screens */
+  flex-wrap: wrap;
+
+  width: 100%;               /* 🔥 IMPORTANT */
 }
 
 .stat-card {
