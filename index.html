@@ -135,12 +135,20 @@
 
 .stats {
   margin-top: 25px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;  /* ✅ centers horizontally */
   align-items: center;
   gap: 20px;
   flex-wrap: nowrap;        /* ✅ keeps in one row */
+  width: fit-content;     /* ⭐ THIS IS THE KEY FIX */
+  padding: 10px 20px;
 }
+
+     @media (max-width: 768px) {
+  .stats {
+    justify-content: center;
+    gap: 10px;
+  }
     
 .stat-card {
   background: white;
@@ -158,12 +166,7 @@
   min-width: 120px;
 }
    
-      @media (max-width: 768px) {
-  .stats {
-    justify-content: center;
-    gap: 10px;
-  }
-    
+         
     /* MENU BUTTON */
 .menu-btn {
   display: none;
@@ -366,10 +369,9 @@
 
   <div class="stats">
     
-    <div class="stat-card">📘 <b>5000+</b> Topics</div>
-<div class="stat-card">⭐ <b>1000+</b> Quizzes</div>
+<div class="stat-card">📘 <b>5000+</b>&nbsp;Topics</div>
+<div class="stat-card">⭐ <b>1000+</b>&nbsp;Quizzes</div>
 <div class="stat-card">🏆 <b>Top Rankers</b></div>
-
 </div>
 
 <div id="dashboard" style="display:none;">
