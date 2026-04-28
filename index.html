@@ -152,11 +152,9 @@
 
   display: flex;
   flex-direction: column;   /* ⭐ important */
-  align-items: center;
+  align-items: cemmmmmmmmmmmmmnter;
   justify-content: center;
-
   text-align: center;
-
   width: fit-content;
 }
 
@@ -208,71 +206,73 @@
     }
 
 /* DASHBOARD HERO */
-.dash-hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: linear-gradient(to right, #ffffff, #f8fdf9);
-  padding: 20px;
-  border-radius: 20px;
-  margin-top: 20px;
-  gap: 20px;
-}
-    
-.dash-left p {
-  margin: 10px 0;
-}
-
-.dash-left {
-  flex: 1;
-  min-width: 250px;
-    }
-
-.dash-right {
-  flex: 1;
-  min-width: 200px;
-  display: flex;
-  justify-content: center;
-}
-    
-.student-img {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 15px;
-}
-
-.start-btn {
-  margin-top: 15px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 25px;
-  background: linear-gradient(45deg, #2ecc71, #27ae60);
-  color: white;
-  font-weight: bold;
-}
-
-.dash-stats {
-  display: flex;
-  gap: 25px;
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-    @media (max-width: 768px) {
-  .dash-hero {
-    flex-direction: column;
-    text-align: center;
+ .dash-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, #ffffff, #f8fdf9);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    gap: 20px;
   }
 
-  .dash-right {
-    order: 2;
+  .dash-left p {
+    margin: 10px 0;
   }
 
   .dash-left {
-    order: 1;
+    flex: 1;
+    min-width: 250px;
   }
+
+  .dash-right {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .student-img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 15px;
+  }
+
+  .start-btn {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    font-weight: bold;
+  }
+
+  .dash-stats {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    font-weight: 500;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .dash-hero {
+      flex-direction: column;
+      text-align: center;
     }
+
+    .dash-right {
+      order: 2;
+    }
+
+    .dash-left {
+      order: 1;
+    }
+  }
+
     
   </style>
   
