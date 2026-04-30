@@ -208,7 +208,7 @@
 /* DASHBOARD HERO */
  .dash-hero {
     display: flex;
-    align-items: center;
+    align-items: Stretch;
     justify-content: space-between;
     flex-wrap: wrap;
     background: linear-gradient(to right, #ffffff, #f8fdf9);
@@ -288,10 +288,7 @@
   align-items: center;
   gap: 15px;
 
-max-width: 1000px;
-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  flex: 2;
 }
 
 .continue-left {
@@ -353,6 +350,7 @@ width: 100%;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   text-align: center;
   width: 320px;
+  flex: 1;
 }
 
 .circle {
@@ -537,7 +535,15 @@ width: 100%;
 
       <small>60% completed</small>
     </div>
-<div class="progress-card">
+
+    
+  </div>
+
+  <button class="continue-btn">Continue →</button>
+
+</div>
+
+  <div class="progress-card">
 
   <h3>Your Progress</h3>
 
@@ -556,12 +562,6 @@ width: 100%;
     </div>
 
   </div>
-
-</div>
-    
-  </div>
-
-  <button class="continue-btn">Continue →</button>
 
 </div>
   
