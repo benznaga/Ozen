@@ -352,7 +352,7 @@ width: 100%;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   text-align: center;
-  width: 250px;
+  width: 320px;
 }
 
 .circle {
@@ -363,12 +363,33 @@ width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 15px auto;
+  position: relative;
 }
 
 .circle span {
-  font-size: 20px;
+  position: absolute;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.circle::before {
+  content: "";
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+    .progress-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.progress-details p {
+  margin: 6px 0;
+  font-size: 14px;
 }
     
   </style>
@@ -516,20 +537,34 @@ width: 100%;
 
       <small>60% completed</small>
     </div>
+<div class="progress-card">
+
+  <h3>Your Progress</h3>
+
+  <div class="progress-content">
+
+    <!-- LEFT: CIRCLE -->
+    <div class="circle">
+      <span>72%</span>
+    </div>
+
+    <!-- RIGHT: DETAILS -->
+    <div class="progress-details">
+      <p>Lessons Completed <b>36/50</b></p>
+      <p>Quizzes Solved <b>18</b></p>
+      <p>🔥 Current Streak <b>7 days</b></p>
+    </div>
+
+  </div>
+
+</div>
+    
   </div>
 
   <button class="continue-btn">Continue →</button>
 
 </div>
-  <div class="progress-card">
-
-  <h3>Your Progress</h3>
-
-  <div class="circle">
-    <span>72%</span>
-  </div>
-
-  <p>Overall completion</p>
+  
 
 </div>
 
