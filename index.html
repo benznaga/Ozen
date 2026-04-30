@@ -433,6 +433,63 @@
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
+    .micro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+  padding: 25px;
+  border-radius: 20px;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.micro-left {
+  flex: 1;
+}
+
+.micro-left h2 {
+  margin: 0;
+  color: #2ecc71;
+}
+
+.quote {
+  font-style: italic;
+  margin: 8px 0;
+}
+
+.desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.micro-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #2ecc71, #27ae60);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.micro-right {
+  flex: 1;
+  text-align: center;
+}
+
+.micro-right img {
+  max-width: 200px;
+}
+
+    @media (max-width: 768px) {
+  .micro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
     
   </style>
   
@@ -525,6 +582,26 @@
     </div>
     
   </div>
+
+  <div class="micro-section">
+
+  <!-- LEFT -->
+  <div class="micro-left">
+    <h2>Micro Learning</h2>
+    <p class="quote">"Small Bites, Big Understanding."</p>
+    <p class="desc">
+      Short lessons. Clear concepts. Better retention. Smarter you!
+    </p>
+
+    <button class="micro-btn">Explore Micro Lessons →</button>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="micro-right">
+    <img src="phone.png" alt="Micro Learning UI">
+  </div>
+
+</div>
 
   <div class="stats">
     
