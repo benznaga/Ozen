@@ -179,11 +179,51 @@
   }
 }
 
-    @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-    }
+/* ===== DASHBOARD MOBILE FIX ===== */
+
+/* HERO STACK */
+.dash-hero {
+  flex-direction: column;
+  text-align: center;
+}
+
+.dash-left {
+  order: 1;
+}
+
+.dash-right {
+  order: 2;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE SIZE */
+.student-bg {
+  width: 200px;
+  height: 200px;
+}
+
+.student-img {
+  width: 140px;
+}
+
+/* STACK CARDS */
+.dashboard-row {
+  flex-direction: column;
+}
+
+/* FULL WIDTH CARDS */
+.continue-card,
+.progress-card {
+  width: 100%;
+}
+
+/* FLOATING CARD FIX */
+.floating-card {
+  position: static;
+  margin-top: 10px;
+}
 
     button, .card, .class-card, .continue-btn, .micro-btn, .nav-links span {
   transition: all 0.3s ease;
