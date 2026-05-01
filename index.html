@@ -11,10 +11,9 @@
       background: #f3f6f9;
     }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;   /* ⭐ centers whole layout */
-}
+    .container {
+      padding: 20px;
+    }
 
     /* NAVBAR */
     .navbar {
@@ -35,9 +34,14 @@
   display: flex;
   gap: 12px;
   white-space: nowrap;
+    .nav-links {
+  display: flex;
+  gap: 12px;
+  white-space: nowrap;
   flex-wrap: wrap;
   font-size: 14px;
   color: #666;
+    }
   font-size: 14px;
   color: #666;
 }
@@ -54,31 +58,13 @@
     }
 
     /* HERO CARD */
-   .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  border-radius: 20px;
-  background: linear-gradient(to right, #ffffff, #f0fff5);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  text-align: left;
-  gap: 20px;
-}
-
-.hero-left {
-  flex: 1;
-}
-
-.hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-right img {
-  max-width: 380px;
-}
+    .hero {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
 
     .tag {
       display: inline-block;
@@ -90,10 +76,10 @@
       margin-bottom: 10px;
     }
 
-   .hero-left h1 {
-  font-size: 48px;
-  line-height: 1.2;
-}
+    h1 {
+      margin: 10px 0;
+      font-size: 28px;
+    }
 
     .highlight {
       color: #2ecc71;
@@ -106,10 +92,10 @@
 
     /* BUTTONS */
     .btn {
-      display: inline-block;
-      width: auto;
+      display: block;
+      width: 90%;
       margin: 12px auto;
-     padding: 12px 25px;
+      padding: 15px;
       border: none;
       border-radius: 30px;
       font-size: 16px;
@@ -127,28 +113,20 @@
 
     /* FEATURES */
     .features-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+      margin-bottom: 15px; 
+    }
 
-.card {
-  flex: 1;
-  min-width: 200px;
-}
-   .card {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
 
     .card small {
       color: #777;
@@ -158,38 +136,15 @@
   margin-top: 25px;   /* ✅ creates proper gap */
 }
 
-.stats {
-  margin-top: 25px;
-
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
 .stat-card {
   background: white;
-  padding: 12px 18px;
+  padding: 15px;
   border-radius: 20px;
+  margin-bottom: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   font-weight: 500;
-
-  display: flex;
-  flex-direction: column;   /* ⭐ important */
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: fit-content;
 }
 
-     @media (max-width: 768px) {
-  .stats {
-    justify-content: center;
-    gap: 10px;}
-     }
-    
     /* MENU BUTTON */
 .menu-btn {
   display: none;
@@ -225,307 +180,13 @@
   }
 }
 
-.xp-badge {
-  background: #e8f5e9;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-    
     @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
     }
-
-/* DASHBOARD HERO */
- .dash-hero {
-    display: flex;
-    align-items: Stretch;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background: linear-gradient(to right, #ffffff, #f8fdf9);
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    gap: 20px;
-  }
-
-  .dash-left p {
-    margin: 10px 0;
-  }
-
-  .dash-left {
-    flex: 1;
-    min-width: 250px;
-  }
-
-  .dash-right {
-    flex: 1;
-    min-width: 200px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .student-img {
-    width: 100%;
-    max-width: 260px;
-    border-radius: 15px;
-  }
-
-  .start-btn {
-    margin-top: 15px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(45deg, #2ecc71, #27ae60);
-    color: white;
-    font-weight: bold;
-  }
-
-  .dash-stats {
-    display: flex;
-    gap: 25px;
-    margin-top: 20px;
-    font-weight: 500;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
-    .dash-hero {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .dash-right {
-      order: 2;
-    }
-
-    .dash-left {
-      order: 1;
-    }
-  }
-
-    /* CONTINUE CARD */
-.continue-card {
-  margin-top: 20px;
-  margin-bottom: 20px;   /* ⭐ ADD THIS */
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-
-  flex: 2;
-}
-
-.continue-left {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.icon-box {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(45deg, #8e44ad, #6c5ce7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  color: white;
-  font-size: 24px;
-}
-
-.progress-bar {
-  width: 200px;
-  height: 8px;
-  background: #eee;
-  border-radius: 10px;
-  margin: 8px 0;
-}
-
-.progress-fill {
-  height: 100%;
-  background: #2ecc71;
-  border-radius: 10px;
-}
-
-.continue-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  background: #2ecc71;
-  color: white;
-  font-weight: bold;
-}
-
-    @media (max-width: 768px) {
-  .continue-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .progress-bar {
-    width: 100%;
-  }
-}
-
-    .progress-card {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
-  flex: 1;
-  max-width: 320px; 
-}
-
-.circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: conic-gradient(#2ecc71 72%, #eee 0%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.circle span {
-  position: absolute;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.circle::before {
-  content: "";
-  width: 90px;
-  height: 90px;
-  background: white;
-  border-radius: 50%;
-  position: absolute;
-}
-
-    .progress-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.progress-details p {
-  text-align: left; 
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-    .class-grid {
-  display: flex;
-  gap: 15px;
-  margin-top: 15px;
-  flex-wrap: wrap;
-}
-
-.class-card {
-  flex: 1;
-  min-width: 100px;
-  padding: 20px;
-  border-radius: 20px;
-  text-align: center;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-/* COLORS */
-.green { background: #d4edda; }
-.blue { background: #d1ecf1; }
-.purple { background: #e2d9f3; }
-.orange { background: #fde2e2; }
-.pink { background: #f8d7da; }
-
-/* TEXT */
-.class-card h2 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.class-card p {
-  margin: 5px 0 0;
-  font-size: 13px;
-  color: #555;
-}
-
-/* HOVER EFFECT 🔥 */
-.class-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-    .micro-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(to right, #e8f5e9, #ffffff);
-  padding: 25px;
-  border-radius: 20px;
-  margin-top: 30px;
-  gap: 20px;
-}
-
-.micro-left {
-  flex: 1;
-}
-
-.micro-left h2 {
-  margin: 0;
-  color: #2ecc71;
-}
-
-.quote {
-  font-style: italic;
-  margin: 8px 0;
-}
-
-.desc {
-  font-size: 14px;
-  color: #666;
-}
-
-.micro-btn {
-  margin-top: 10px;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 25px;
-  background: linear-gradient(45deg, #2ecc71, #27ae60);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.micro-right {
-  flex: 1;
-  text-align: center;
-}
-
-.micro-right img {
-  max-width: 200px;
-}
-
-    @media (max-width: 768px) {
-  .micro-section {
-    flex-direction: column;
-    text-align: center;
-  }
-}
     
   </style>
-  
 </head>
 
 <body>
@@ -547,19 +208,28 @@
       <span>Courses</span>
       <span>Practice</span>
       <span>Progress</span>
-      <div class="xp-badge">⭐ 650 XP</div>
     </div>
   </div>
 
   <!-- HERO -->
   <div class="hero">
 
-  <!-- LEFT -->
-  <div class="hero-left">
+    <div class="tag" style="display:flex; justify-content:space-between; align-items:center;">
 
-    <div class="tag">
-      ⚡ Micro Learning
-    </div>
+  <span>⚡ Micro Learning</span>
+
+  <span style="
+    background:#fff3cd;
+    color:#b8860b;
+    padding:4px 10px;
+    border-radius:15px;
+    font-size:12px;
+    font-weight:bold;
+  ">
+    🏆 Leaderboard
+  </span>
+
+</div>
 
     <h1>
       Learn Better.<br>
@@ -571,17 +241,13 @@
     </p>
 
     <button class="btn green" onclick="goToDashboard()">
-      Start Learning Now →
-    </button>
+  🎓 I am a Student
+</button>
+    <button class="btn blue">👨‍🏫 I am a Teacher</button>
 
   </div>
 
-  <!-- RIGHT -->
-  <div class="hero-right">
-    <img src="student.png">
-  </div>
 
-</div>
   <!-- FEATURES -->
   <div class="features-grid">
 
@@ -609,161 +275,47 @@
       <small>Track progress</small>
     </div>
     
+  </div>
+
   <div class="stats">
     
-<div class="stat-card">📘 <b>5000+</b>&nbsp;Topics</div>
-<div class="stat-card">⭐ <b>1000+</b>&nbsp;Quizzes</div>
+    <div class="stat-card">📘 <b>5000+</b> Topics</div>
+<div class="stat-card">⭐ <b>1000+</b> Quizzes</div>
 <div class="stat-card">🏆 <b>Top Rankers</b></div>
+
 </div>
 
 <div id="dashboard" style="display:none;">
   
-<!-- DASHBOARD HERO -->
-<div class="hero">
+<h3 style="margin-top:20px; margin-bottom:10px;">
+  Choose Your Class
+</h3>
 
-  <!-- LEFT -->
-  <div class="hero-left">
+<div style="display:flex; gap:10px; overflow-x:auto; margin-top:10px;">
 
-    <div class="tag">
-      ⚡ Micro Learning
-    </div>
-
-    <h1>
-      Learn Better.<br>
-      <span class="highlight">Achieve Greater.</span>
-    </h1>
-
-    <p class="subtitle">
-      Your all-in-one learning companion for Classes 8–12.
-    </p>
-
-    <button class="btn green" onclick="goToDashboard()">
-      Start Learning Now →
-    </button>
-
-
-    <div class="dash-stats">
-      <div>📘 5000+<br><small>Topics</small></div>
-      <div>⭐ 1000+<br><small>Quizzes</small></div>
-      <div>🏆 Top<br><small>Rankers</small></div>
-    </div>
+  <div style="min-width:70px; padding:15px; border-radius:15px; background:#d4edda; text-align:center; font-weight:bold;">
+    8<br><small>Class 8</small>
   </div>
 
-  <div class="dash-right">
-    <img src="student.png" class="student-img">
+  <div style="min-width:70px; padding:15px; border-radius:15px; background:#d1ecf1; text-align:center; font-weight:bold;">
+    9<br><small>Class 9</small>
   </div>
 
-</div>
- 
-<div class="dashboard-row">
-  dashboard-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-  
-    <!-- CONTINUE LEARNING -->
-<div class="continue-card">
-
-  <div class="continue-left">
-    <div class="icon-box">🧪</div>
-
-    <div>
-      <h3>Science</h3>
-      <p>Chapter 2: Chemical Reactions</p>
-
-      <div class="progress-bar">
-        <div class="progress-fill" style="width:60%"></div>
-      </div>
-
-      <small>60% completed</small>
-    </div>
-
-    
+  <div style="min-width:70px; padding:15px; border-radius:15px; background:#e2d9f3; text-align:center; font-weight:bold;">
+    10<br><small>Class 10</small>
   </div>
 
-  <button class="continue-btn">Continue →</button>
+  <div style="min-width:70px; padding:15px; border-radius:15px; background:#fde2e2; text-align:center; font-weight:bold;">
+    11<br><small>Class 11</small>
+  </div>
 
- </div>
-
-    <div class="progress-card">
-
-  <h3>Your Progress</h3>
-
-  <div class="progress-content">
-
-    <!-- LEFT: CIRCLE -->
-    <div class="circle">
-      <span>72%</span>
-    </div>
-
-    <!-- RIGHT: DETAILS -->
-    <div class="progress-details">
-      <p>Lessons Completed <b>36/50</b></p>
-      <p>Quizzes Solved <b>18</b></p>
-      <p>🔥 Current Streak <b>7 days</b></p>
-    </div>
-
+  <div style="min-width:70px; padding:15px; border-radius:15px; background:#f8d7da; text-align:center; font-weight:bold;">
+    12<br><small>Class 12</small>
   </div>
 
 </div>
 
-  <h2 style="margin-top:25px;">Choose Your Class</h2>
-
 </div>
-
-<div class="class-grid">
-  
-<div class="class-card green">
-  <h2>8</h2>
-  <p>Class 8</p>
-</div>
-
-<div class="class-card blue">
-  <h2>9</h2>
-  <p>Class 9</p>
-</div>
-
-<div class="class-card purple">
-  <h2>10</h2>
-  <p>Class 10</p>
-</div>
-
-<div class="class-card orange">
-  <h2>11</h2>
-  <p>Class 11</p>
-</div>
-
-<div class="class-card pink">
-  <h2>12</h2>
-  <p>Class 12</p>
-</div>
-    
-</div>
-<div class="micro-section">
-
-  <!-- LEFT -->
-  <div class="micro-left">
-    <h2>Micro Learning</h2>
-    <p class="quote">"Small Bites, Big Understanding."</p>
-    <p class="desc">
-      Short lessons. Clear concepts. Better retention. Smarter you!
-    </p>
-
-    <button class="micro-btn">Explore Micro Lessons →</button>
-  </div>
-
-  <!-- RIGHT -->
-  <div class="micro-right">
-    <img src="phone.png" alt="Micro Learning UI">
-  </div>
-
-</div>
-  
-</div>
-  
-
-
   
 <script>
 function toggleMenu() {
