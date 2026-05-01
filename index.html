@@ -127,13 +127,17 @@
 
     /* FEATURES */
     .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 25px;
-      margin-bottom: 15px; 
-    }
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
 
+.card {
+  flex: 1;
+  min-width: 200px;
+}
     .card {
       background: white;
       padding: 20px;
@@ -217,6 +221,13 @@
   }
 }
 
+.xp-badge {
+  background: #e8f5e9;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+    
     @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -532,6 +543,7 @@
       <span>Courses</span>
       <span>Practice</span>
       <span>Progress</span>
+      <div class="xp-badge">⭐ 650 XP</div>
     </div>
   </div>
 
@@ -675,7 +687,9 @@
 
   <button class="continue-btn">Continue →</button>
 
-   <div class="progress-card">
+ </div>
+
+    <div class="progress-card">
 
   <h3>Your Progress</h3>
 
@@ -694,8 +708,6 @@
     </div>
 
   </div>
-
-</div>
 
 </div>
 
