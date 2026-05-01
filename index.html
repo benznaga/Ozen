@@ -58,9 +58,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 50px;
   border-radius: 20px;
-  background: white;
+  background: linear-gradient(to right, #ffffff, #f0fff5);
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   text-align: left;
   gap: 20px;
@@ -77,7 +77,7 @@
 }
 
 .hero-right img {
-  max-width: 300px;
+  max-width: 380px;
 }
 
     .tag {
@@ -90,10 +90,10 @@
       margin-bottom: 10px;
     }
 
-    h1 {
-      margin: 10px 0;
-      font-size: 28px;
-    }
+   .hero-left h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
 
     .highlight {
       color: #2ecc71;
@@ -106,10 +106,10 @@
 
     /* BUTTONS */
     .btn {
-      display: block;
-      width: 90%;
+      display: inline-block;
+      width: auto;
       margin: 12px auto;
-      padding: 15px;
+     padding: 12px 25px;
       border: none;
       border-radius: 30px;
       font-size: 16px;
@@ -138,13 +138,17 @@
   flex: 1;
   min-width: 200px;
 }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
+   .card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
 
     .card small {
       color: #777;
@@ -550,22 +554,12 @@
   <!-- HERO -->
   <div class="hero">
 
-    <div class="tag" style="display:flex; justify-content:space-between; align-items:center;">
+  <!-- LEFT -->
+  <div class="hero-left">
 
-  <span>⚡ Micro Learning</span>
-
-  <span style="
-    background:#fff3cd;
-    color:#b8860b;
-    padding:4px 10px;
-    border-radius:15px;
-    font-size:12px;
-    font-weight:bold;
-  ">
-    🏆 Leaderboard
-  </span>
-
-</div>
+    <div class="tag">
+      ⚡ Micro Learning
+    </div>
 
     <h1>
       Learn Better.<br>
@@ -577,13 +571,17 @@
     </p>
 
     <button class="btn green" onclick="goToDashboard()">
-  🎓 I am a Student
-</button>
-    <button class="btn blue">👨‍🏫 I am a Teacher</button>
+      Start Learning Now →
+    </button>
 
   </div>
 
+  <!-- RIGHT -->
+  <div class="hero-right">
+    <img src="student.png">
+  </div>
 
+</div>
   <!-- FEATURES -->
   <div class="features-grid">
 
@@ -611,12 +609,6 @@
       <small>Track progress</small>
     </div>
     
-  </div>
-
-
-
-</div>
-
   <div class="stats">
     
 <div class="stat-card">📘 <b>5000+</b>&nbsp;Topics</div>
@@ -664,6 +656,11 @@
 </div>
  
 <div class="dashboard-row">
+  dashboard-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
   
     <!-- CONTINUE LEARNING -->
 <div class="continue-card">
