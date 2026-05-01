@@ -54,13 +54,31 @@
     }
 
     /* HERO CARD */
-    .hero {
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      text-align: center;
-    }
+   .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: left;
+  gap: 20px;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  max-width: 300px;
+}
 
     .tag {
       display: inline-block;
@@ -597,17 +615,28 @@
 <div id="dashboard" style="display:none;">
   
 <!-- DASHBOARD HERO -->
-<div class="dash-hero">
+<div class="hero">
 
-  <div class="dash-left">
+  <!-- LEFT -->
+  <div class="hero-left">
+
+    <div class="tag">
+      ⚡ Micro Learning
+    </div>
+
     <h1>
       Learn Better.<br>
       <span class="highlight">Achieve Greater.</span>
     </h1>
 
-    <p>Your all-in-one learning companion for Classes 8–12.</p>
+    <p class="subtitle">
+      Your all-in-one learning companion for Classes 8–12.
+    </p>
 
-    <button class="start-btn">Start Learning Now →</button>
+    <button class="btn green" onclick="goToDashboard()">
+      Start Learning Now →
+    </button>
+
 
     <div class="dash-stats">
       <div>📘 5000+<br><small>Topics</small></div>
