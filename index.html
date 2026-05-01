@@ -221,9 +221,13 @@ button:hover, .continue-btn:hover, .micro-btn:hover {
 }
 
 /* CONTINUE CARD */
-.continue-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+.continue-card {
+  flex: 2;
+  background: linear-gradient(135deg, #ffffff, #f6fff8);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
 /* PROGRESS CARD */
@@ -261,6 +265,11 @@ button:hover, .continue-btn:hover, .micro-btn:hover {
   background: #2ecc71;
   color: white;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
 }
 
 /* ROW */
@@ -289,17 +298,58 @@ button:hover, .continue-btn:hover, .micro-btn:hover {
 
 /* CIRCLE */
 .circle {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background: conic-gradient(#2ecc71 72%, #eee 0%);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+}
+    .floating-card {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+    .continue-card:hover,
+.progress-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+    .xp-badge {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background: #e8f5e9;
+  color: #2ecc71;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
 }
     
-    
   </style>
+
+
+
+  
 </head>
 
 <body>
@@ -411,6 +461,8 @@ button:hover, .continue-btn:hover, .micro-btn:hover {
 
     <p>Your all-in-one learning companion for Classes 8–12.</p>
 
+    <div class="xp-badge">⭐ 650 XP</div>
+
     <button class="start-btn">Continue Learning →</button>
 
     <div class="dash-stats">
@@ -420,9 +472,16 @@ button:hover, .continue-btn:hover, .micro-btn:hover {
     </div>
   </div>
 
-  <div class="dash-right">
-    <img src="student.png" style="width:220px;">
+  <div class="dash-right" style="position:relative;">
+
+  <img src="student.png" style="width:240px;">
+
+  <!-- FLOATING CARD -->
+  <div class="floating-card">
+    🎯 Smart Practice
   </div>
+
+</div>
 
 </div>
 
